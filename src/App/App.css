@@ -1,19 +1,29 @@
+.container {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-rows: 40px auto;
+}
+
 .header {
-  height: 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: rgb(105, 105, 104);
 }
 
-.application {
-  display: flex;
-  flex-direction: row
-}
-
-.navigation-menu {
-  flex-grow: 1;
-  background-color: red;
-  align-items: stretch;
+.menu {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: auto;
+  background-color: rgb(75, 75, 64);
 }
 
 .content {
-  flex-grow: 12;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: auto;
 }
 

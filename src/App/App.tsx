@@ -2,22 +2,25 @@ import React from 'react';
 import './App.css'
 import Header from '../Header' 
 import Menu from '../Menu'
+import Router from './Router'
 
 class App extends React.Component {
   render () {
     return (
-      <div>
+      <div className="container">
+
         <div className="header">
           <Header />
         </div>
-        <div className="application">
-          <div className="application navigation-menu">
-            <Menu />
-          </div>
-          <div className="application content">
-            Content
-          </div>
+
+        <div className="menu">
+          <Menu />
         </div>
+
+        <div className="content">
+          <Router/>
+        </div>
+
       </div>
     );
   }

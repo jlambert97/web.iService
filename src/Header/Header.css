@@ -6,7 +6,6 @@
 }
 
 .logo {
-  background-color: violet;
   flex-grow: 1;  
 }
 
@@ -15,7 +14,6 @@
 }
 
 .rigth {
-  background-color: blue;
   justify-content: flex-end;
   flex-grow: 12;
 }
