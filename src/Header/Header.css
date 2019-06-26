@@ -1,0 +1,25 @@
+.container-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+}
+
+.logo {
+  background-color: violet;
+  width: 100px
+}
+
+.logo-item {
+  margin-left: 10px;
+}
+
+.rigth {
+  background-color: blue;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.buttons {
+  margin-right: 10px; 
+}
