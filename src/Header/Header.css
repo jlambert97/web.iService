@@ -7,17 +7,17 @@
 
 .logo {
   background-color: violet;
-  width: 100px
+  flex-grow: 1;  
 }
 
 .logo-item {
-  margin-left: 10px;
+  margin-left: 0px;
 }
 
 .rigth {
   background-color: blue;
   justify-content: flex-end;
-  flex-grow: 1;
+  flex-grow: 12;
 }
 
 .buttons {

@@ -2,14 +2,18 @@
   height: 100%;
 }
 
+.application {
+  display: flex;
+  flex-direction: row
+}
+
 .navigation-menu {
-  float: left;
-  width: 10%;
-  height: 100vh; 
+  flex-grow: 1;
+  background-color: red;
+  align-items: stretch;
 }
 
 .content {
-  float: right;
-  width: auto
+  flex-grow: 12;
 }
 

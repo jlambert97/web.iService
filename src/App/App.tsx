@@ -10,11 +10,13 @@ class App extends React.Component {
         <div className="header">
           <Header />
         </div>
-        <div className="navigation-menu">
-          <Menu />
-        </div>
-        <div className="content">
-          Content
+        <div className="application">
+          <div className="application navigation-menu">
+            <Menu />
+          </div>
+          <div className="application content">
+            Content
+          </div>
         </div>
       </div>
     );
