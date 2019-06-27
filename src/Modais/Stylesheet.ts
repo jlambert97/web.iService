@@ -30,3 +30,8 @@ export const closeButton = styled.button`
     color: red;
     padding: 2px;
 `
+
+export const modalHeader = styled.div`
+    display: flex;
+    justify-content: flex-end 
+`

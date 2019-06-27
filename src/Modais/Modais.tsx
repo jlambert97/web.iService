@@ -36,12 +36,12 @@ class Modais extends Component<Props, State> {
             return (
                 <StyleSheet.backgroundModal>
                     <StyleSheet.modal>
-                        <div>
-                            <StyleSheet.closeButton onClick={() => closeAction(false)}>X</StyleSheet.closeButton>
+                            <StyleSheet.modalHeader>
+                                <StyleSheet.closeButton onClick={() => closeAction(false)}>X</StyleSheet.closeButton>
+                            </StyleSheet.modalHeader>
                             <div>
                                 <Component />      
                             </div>
-                        </div>
                     </StyleSheet.modal>
                 </StyleSheet.backgroundModal>
             );
