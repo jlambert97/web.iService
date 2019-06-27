@@ -12,6 +12,13 @@
   background-color: rgb(105, 105, 104);
 }
 
+.modais {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
 .application {
   grid-column-start: 1;
   grid-column-end: 4;
@@ -22,10 +29,9 @@
 }
 
 .menu {
-  background-color: aliceblue; 
+  background-color: rgb(180, 201, 219); 
 }
 
 .content {
-  background-color: royalblue; 
   flex-grow: 1;
 }

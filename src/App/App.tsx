@@ -8,22 +8,25 @@ import Modais from '../Modais/Modais'
 class App extends React.Component {
   render () {
     return (
-      <div className="container">
+      <div>       
 
-        <Modais/>
+        <Modais/>        
 
-        <div className="header">
-          <Header />
-        </div>
+        <div className="container">
 
-        <div className="application">
-          <div className="menu">
-            <Menu />
+          <div className="header">
+            <Header />
           </div>
 
-          <div className="content">
-            <Router/>
+          <div className="application">
+            <div className="menu">
+              <Menu />
+            </div>
+            <div className="content">
+              <Router/>
+            </div>
           </div>
+
         </div>
 
       </div>

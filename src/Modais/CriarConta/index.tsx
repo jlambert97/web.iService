@@ -1,32 +1,21 @@
 import React, { Component } from 'react'
 import DatePicker from 'react-datepicker'
 
-
 class CriarConta extends Component {
     
     render() {
         return (
-        <div className="modal" id="modal">
+          <div className="modal">
+            <div className="title">
+              <h2>Titulo</h2>
+            </div>  
             <div>
-              Name: <input></input>
+              <span>Primeira modal</span>
             </div>
             <div>
-              Birthday: <DatePicker onChange={() => ({})}dateFormat="dd/MM/yyyy"/>
-            </div>
-            <div>
-              Email: <input></input>
-            </div>
-            <div>
-              Password: <input type="password"></input>
-            </div>
-            <div>
-              Confirm Password: <input type="password"></input>
-            </div>
-            <div>
-              <button>Close</button>
-              <button>Criar Conta</button>
-            </div>
-        </div>
+              É isto, aqui vamos usar o conteúdo  
+            </div>  
+          </div>
         )
     }
 }

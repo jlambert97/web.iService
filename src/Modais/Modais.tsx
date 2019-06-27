@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk'
-import CriarConta from './CriarConta'
 import * as modaisTypes from '../Redux/modais/types'
 import * as modaisActions from '../Redux/modais/actions'
 import { IApplicationState } from '../Redux/CombineReducers'
+import './Modais.css'
+import CriarConta from './CriarConta'
 
 interface State {
     showModalLogin: typeof modaisActions.loginShow
@@ -25,25 +26,11 @@ type Props = StateProps & DispatchProps
 class Modais extends Component<Props, State> {
     render() {
         return (
-            <div>
-                {this.props.state.modais.criarConta && <CriarConta /> }
-            </div>
+        <div>
+            {/* CriarConta */}
+            {this.props.state.modais.criarConta && <div className="backgroud-modal"><CriarConta /></div>}
+        </div>
         )
-    }
-
-    public showModal(modal: string, value: boolean): void {
-        switch (modal) {
-            case modaisTypes.CRIAR_CONTA: {
-                this.props.showModalCriarConta(value)
-                break
-            }
-            case modaisTypes.LOGIN: {
-                this.props.showModalLogin(value)
-                break
-            }
-            default:
-                break
-        }
     }
 }
 
