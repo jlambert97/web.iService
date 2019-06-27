@@ -5,7 +5,7 @@ class CriarConta extends Component {
     
     render() {
         return (
-          <div className="modal">
+          <div>
             <div className="title">
               <h2>Titulo</h2>
             </div>  

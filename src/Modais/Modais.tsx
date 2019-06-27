@@ -4,7 +4,7 @@ import { ThunkDispatch } from 'redux-thunk'
 import * as modaisTypes from '../Redux/modais/types'
 import * as modaisActions from '../Redux/modais/actions'
 import { IApplicationState } from '../Redux/CombineReducers'
-import './Modais.css'
+import * as StyleSheet from './Stylesheet'
 import CriarConta from './CriarConta'
 
 interface State {
@@ -26,11 +26,26 @@ type Props = StateProps & DispatchProps
 class Modais extends Component<Props, State> {
     render() {
         return (
-        <div>
-            {/* CriarConta */}
-            {this.props.state.modais.criarConta && <div className="backgroud-modal"><CriarConta /></div>}
-        </div>
+            <div>
+                {/* CriarConta */}
+                {this.props.state.modais.criarConta && getModal(CriarConta, this.props.showModalCriarConta) }
+            </div>
         )
+
+        function getModal(Component: any, closeAction: any) {
+            return (
+                <StyleSheet.backgroundModal>
+                    <StyleSheet.modal>
+                        <div>
+                            <StyleSheet.closeButton onClick={() => closeAction(false)}>X</StyleSheet.closeButton>
+                            <div>
+                                <Component />      
+                            </div>
+                        </div>
+                    </StyleSheet.modal>
+                </StyleSheet.backgroundModal>
+            );
+        }
     }
 }
 
