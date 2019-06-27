@@ -10,7 +10,7 @@ class Header extends React.Component {
         </div>
         <div className="container-header rigth">
           <div className="container-header rigth buttons">
-            <button>Criar Conta</button>
+            <button onClick={() => ({})}>Criar Conta</button>
             <button>Login</button>
           </div>
         </div>
