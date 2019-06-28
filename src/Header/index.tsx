@@ -32,7 +32,7 @@ class Header extends React.Component<Props, State> {
         <div className="container-header rigth">
           <div className="container-header rigth buttons">
             <button onClick={() => this.props.showModalCriarConta(true)}>Criar Conta</button>
-            <button onClick={() => this.props.showModalCriarConta(true)}>Login</button>
+            <button onClick={() => this.props.showModalLogin(true)}>Login</button>
           </div>
         </div>
       </div>

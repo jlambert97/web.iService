@@ -23,7 +23,15 @@ export const modal = styled.div`
     border-radius: 5px;
 `
 
+export const modalHeader = styled.div`
+    display: grid;
+    grid-template-columns: auto 25px;
+    grid-template-rows: 25px;
+`
+
 export const closeButton = styled.button`
+    grid-column-start: 2;
+    grid-column-end: 3;
     background-color: transparent;
     border-radius: 3px;
     border: 2px solid palevioletred;
@@ -31,7 +39,16 @@ export const closeButton = styled.button`
     padding: 2px;
 `
 
-export const modalHeader = styled.div`
+export const tituloModal = styled.div`
     display: flex;
-    justify-content: flex-end 
+    flex-direction: column;
+    justify-content: center;
+`
+
+export const labelTitulo = styled.text`
+    font-size: x-large;
+`
+
+export const content = styled.div`
+    margin-top: 10px;
 `

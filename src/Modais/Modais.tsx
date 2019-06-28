@@ -6,6 +6,7 @@ import * as modaisActions from '../Redux/modais/actions'
 import { IApplicationState } from '../Redux/CombineReducers'
 import * as StyleSheet from './Stylesheet'
 import CriarConta from './CriarConta'
+import Login from './Login'
 
 interface State {
     showModalLogin: typeof modaisActions.loginShow
@@ -28,20 +29,25 @@ class Modais extends Component<Props, State> {
         return (
             <div>
                 {/* CriarConta */}
-                {this.props.state.modais.criarConta && getModal(CriarConta, this.props.showModalCriarConta) }
+                {this.props.state.modais.criarConta && getModal(CriarConta, this.props.showModalCriarConta, 'Criar Conta')}
+                {/* Login */}
+                {this.props.state.modais.login && getModal(Login, this.props.showModalLogin, 'Login')}
             </div>
         )
 
-        function getModal(Component: any, closeAction: any) {
+        function getModal(Component: any, closeAction: any, titulo: string) {
             return (
-                <StyleSheet.backgroundModal>
+                <StyleSheet.backgroundModal onClick={() => closeAction(false)}>
                     <StyleSheet.modal>
                             <StyleSheet.modalHeader>
+                                <StyleSheet.tituloModal>
+                                    <StyleSheet.labelTitulo>{titulo}</StyleSheet.labelTitulo>
+                                </StyleSheet.tituloModal>
                                 <StyleSheet.closeButton onClick={() => closeAction(false)}>X</StyleSheet.closeButton>
                             </StyleSheet.modalHeader>
-                            <div>
+                            <StyleSheet.content>
                                 <Component />      
-                            </div>
+                            </StyleSheet.content>
                     </StyleSheet.modal>
                 </StyleSheet.backgroundModal>
             );

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import DatePicker from 'react-datepicker'
 
 class CriarConta extends Component {
     
