@@ -1,35 +1,40 @@
 import React from 'react';
-import './App.css'
-import Header from '../Header' 
-import Menu from '../Menu'
+import { BrowserRouter as ApplicationRouter, Switch } from 'react-router-dom'
+import * as StyleSheet from './AppStyleSheet'
 import Router from './Router'
-import Modais from '../Modais/Modais'
+import Header from '../Components/Header' 
+import Menu from '../Components/Menu'
+import Modais from '../Components/Modais'
 
 class App extends React.Component {
   render () {
     return (
-      <div>       
-
-        <Modais/>        
-
-        <div className="container">
-
-          <div className="header">
+      <StyleSheet.container>
+        <ApplicationRouter>
+          {/* Header */}
+          <StyleSheet.header>
             <Header />
-          </div>
-
-          <div className="application">
-            <div className="menu">
+          </StyleSheet.header>
+          
+          {/* Box da aplicação (Espaço util excluindo o header)*/}
+          <StyleSheet.application>
+            {/* Menu */}
+            <StyleSheet.menu>
               <Menu />
-            </div>
-            <div className="content">
-              <Router/>
-            </div>
-          </div>
+            </StyleSheet.menu>
+            {/* Conteudo (Todos os componentes que vão rodar no espaço livre, e serão gerenciados pelo switch) */}
+            <StyleSheet.content>
+              <Switch>
+                <Router />
+              </Switch>
+            </StyleSheet.content>
 
-        </div>
+          </StyleSheet.application>
 
-      </div>
+          {/* Modais */}
+          <Modais />
+        </ApplicationRouter>
+      </StyleSheet.container>      
     );
   }
 }

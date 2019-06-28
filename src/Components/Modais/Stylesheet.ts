@@ -26,7 +26,8 @@ export const modal = styled.div`
 export const modalHeader = styled.div`
     display: grid;
     grid-template-columns: auto 25px;
-    grid-template-rows: 25px;
+    grid-template-rows: 25px 4px;
+    border-bottom: 1px solid blanchedalmond
 `
 
 export const closeButton = styled.button`
@@ -39,13 +40,15 @@ export const closeButton = styled.button`
     padding: 2px;
 `
 
+// Div do titulo da modal
 export const tituloModal = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
 `
 
-export const labelTitulo = styled.text`
+//Label do titulo da modal
+export const labelTitulo = styled.label`
     font-size: x-large;
 `
 

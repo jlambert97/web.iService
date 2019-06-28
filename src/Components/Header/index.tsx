@@ -1,10 +1,10 @@
 import React from 'react';
 import { ThunkDispatch } from 'redux-thunk'
-import './Header.css';
+import * as StyleSheet from './StyleSheet'
 import { connect } from 'react-redux';
-import { IApplicationState } from '../Redux/CombineReducers'
-import * as modaisActions from '../Redux/modais/actions'
-import * as modaisTypes from '../Redux/modais/types'
+import { IApplicationState } from '../../Redux/CombineReducers'
+import * as modaisActions from '../../Redux/modais/actions'
+import * as modaisTypes from '../../Redux/modais/types'
 
 interface State {
   showModalLogin: typeof modaisActions.loginShow
@@ -25,17 +25,26 @@ type Props = StateProps & DispatchProps
 class Header extends React.Component<Props, State> {
   render() {
     return (
-      <div className="container-header">
-        <div className="container-header logo">
-          <label className="container-header logo logo-item">Xaxa</label>
-        </div>
-        <div className="container-header rigth">
-          <div className="container-header rigth buttons">
-            <button onClick={() => this.props.showModalCriarConta(true)}>Criar Conta</button>
-            <button onClick={() => this.props.showModalLogin(true)}>Login</button>
-          </div>
-        </div>
-      </div>
+      <StyleSheet.container>
+        <StyleSheet.title>
+          iService
+        </StyleSheet.title>
+        <StyleSheet.middle>
+
+        </StyleSheet.middle>
+        <StyleSheet.buttons>
+          <button onClick={() => this.props.showModalCriarConta(true)}>Criar Conta</button>
+          <button onClick={() => this.props.showModalLogin(true)}>Login</button>
+        </StyleSheet.buttons>
+      </StyleSheet.container>
+
+
+
+      //   <div className="container-header rigth">
+      //     <div className="container-header rigth buttons">
+      //     </div>
+      //   </div>
+
     )
   }
 }

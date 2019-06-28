@@ -9,11 +9,6 @@ class Dashboard extends React.Component {
           <div>
             Dashboard!
           </div>
-          <div>
-            <Link to="/">
-              <button>Ir para a home!</button>
-            </Link>
-          </div>
         </div>
     )
   }

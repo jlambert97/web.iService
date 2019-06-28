@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk'
-import * as modaisTypes from '../Redux/modais/types'
-import * as modaisActions from '../Redux/modais/actions'
-import { IApplicationState } from '../Redux/CombineReducers'
+import * as modaisTypes from '../../Redux/modais/types'
+import * as modaisActions from '../../Redux/modais/actions'
+import { IApplicationState } from '../../Redux/CombineReducers'
 import * as StyleSheet from './Stylesheet'
 import CriarConta from './CriarConta'
 import Login from './Login'
@@ -34,23 +34,23 @@ class Modais extends Component<Props, State> {
                 {this.props.state.modais.login && getModal(Login, this.props.showModalLogin, 'Login')}
             </div>
         )
-
+        
         function getModal(Component: any, closeAction: any, titulo: string) {
             return (
-                <StyleSheet.backgroundModal onClick={() => closeAction(false)}>
-                    <StyleSheet.modal>
-                            <StyleSheet.modalHeader>
-                                <StyleSheet.tituloModal>
-                                    <StyleSheet.labelTitulo>{titulo}</StyleSheet.labelTitulo>
-                                </StyleSheet.tituloModal>
-                                <StyleSheet.closeButton onClick={() => closeAction(false)}>X</StyleSheet.closeButton>
-                            </StyleSheet.modalHeader>
-                            <StyleSheet.content>
-                                <Component />      
-                            </StyleSheet.content>
+                <StyleSheet.backgroundModal id="background">
+                    <StyleSheet.modal tabIndex={0} onBlur={() => closeAction(false)}>
+                        <StyleSheet.modalHeader>
+                            <StyleSheet.tituloModal>
+                                <StyleSheet.labelTitulo>{titulo}</StyleSheet.labelTitulo>
+                            </StyleSheet.tituloModal>
+                            <StyleSheet.closeButton onClick={() => closeAction(false)}>X</StyleSheet.closeButton>
+                        </StyleSheet.modalHeader>
+                        <StyleSheet.content>
+                            <Component />      
+                        </StyleSheet.content>
                     </StyleSheet.modal>
                 </StyleSheet.backgroundModal>
-            );
+            )
         }
     }
 }
