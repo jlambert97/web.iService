@@ -27,17 +27,17 @@ type Props = StateProps & DispatchProps
 class Modais extends Component<Props, State> {
     render() {
         return (
-            <div>
+            <section>
                 {/* CriarConta */}
                 {this.props.state.modais.criarConta && getModal(CriarConta, this.props.showModalCriarConta, 'Criar Conta')}
                 {/* Login */}
                 {this.props.state.modais.login && getModal(Login, this.props.showModalLogin, 'Login')}
-            </div>
+            </section>
         )
         
         function getModal(Component: any, closeAction: any, titulo: string) {
             return (
-                <StyleSheet.backgroundModal id="background">
+                <StyleSheet.backgroundModal>
                     <StyleSheet.modal tabIndex={0} onBlur={() => closeAction(false)}>
                         <StyleSheet.modalHeader>
                             <StyleSheet.tituloModal>
