@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import StyledInput, * as InputConfig from '../../StyledHtmlElements/Input'
 
 class Login extends Component {
     
@@ -6,10 +7,10 @@ class Login extends Component {
         return (
           <div>
             <div>
-              <input placeholder="email" />
+              <StyledInput status={InputConfig.Status.Default}/>
             </div>  
             <div>
-              <input type="password" placeholder="password" />
+              <input type="password" />
             </div>
           </div>
         )

@@ -38,7 +38,7 @@ class Modais extends Component<Props, State> {
         function getModal(Component: any, closeAction: any, titulo: string) {
             return (
                 <StyleSheet.backgroundModal>
-                    <StyleSheet.modal tabIndex={0} onBlur={() => closeAction(false)}>
+                    <StyleSheet.modal>
                         <StyleSheet.modalHeader>
                             <StyleSheet.tituloModal>
                                 <StyleSheet.labelTitulo>{titulo}</StyleSheet.labelTitulo>
