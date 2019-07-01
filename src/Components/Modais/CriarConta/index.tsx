@@ -9,7 +9,7 @@ class CriarConta extends Component {
               <span>Primeira modal</span>
             </div>
             <div>
-              É isto, aqui vamos usar o conteúdo  
+              É isto, aqui vamos usar o conteúdo  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
             </div>  
           </div>
         )

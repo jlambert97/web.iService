@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 export const Status = {
   Invalid: 'salmon',
@@ -11,12 +11,15 @@ interface textInputProps {
 }
 
 const StyledInput = styled.input`
-    margin: 0 .25rem;
-    min-width: 125px;
-    border: 1px solid #eee;
-    border-left: 2px solid;
-    border-radius: 5px;
+    border: 1px solid #9499a1;
+    border-radius: 3px;
+    padding: 3px;
     transition: border-color .5s ease-out;
     border-left-color: ${(p: textInputProps) => p.status};
+    :focus {
+      border-color: #d13d3d;
+      box-shadow: 0 0 0 0;
+      outline: 0;
+    }
 `
 export default StyledInput

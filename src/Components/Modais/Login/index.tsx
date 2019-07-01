@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import StyledInput, * as InputConfig from '../../StyledHtmlElements/Input'
+import StyledButton from '../../StyledHtmlElements/Button'
 
 class Login extends Component {
     
@@ -7,10 +8,13 @@ class Login extends Component {
         return (
           <div>
             <div>
-              <StyledInput status={InputConfig.Status.Default}/>
+              <StyledInput placeholder="Email" status={InputConfig.Status.Default}/>
             </div>  
             <div>
-              <input type="password" />
+              <StyledInput placeholder="Password" type="password" status={InputConfig.Status.Default}/>
+            </div>
+            <div>
+              <StyledButton>Log in</StyledButton>
             </div>
           </div>
         )

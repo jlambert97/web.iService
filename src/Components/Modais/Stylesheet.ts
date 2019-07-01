@@ -38,6 +38,7 @@ export const closeButton = styled.button`
     border: 2px solid palevioletred;
     color: red;
     padding: 2px;
+    cursor: pointer;
 `
 
 // Div do titulo da modal
