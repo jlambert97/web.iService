@@ -9,6 +9,7 @@ const StyledButton = styled.button`
   border-radius: 3px;
   cursor: pointer;
   padding: 3px 10px;
+  margin: 3px;
   :focus {
     border-color: #bd662f;
     box-shadow: 0 0 0 0;

@@ -16,6 +16,7 @@ const StyledInput = styled.input`
     padding: 3px;
     transition: border-color .5s ease-out;
     border-left-color: ${(p: textInputProps) => p.status};
+    margin: 3px;
     :focus {
       border-color: #d13d3d;
       box-shadow: 0 0 0 0;

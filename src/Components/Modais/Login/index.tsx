@@ -1,24 +1,27 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import StyledInput, * as InputConfig from '../../StyledHtmlElements/Input'
 import StyledButton from '../../StyledHtmlElements/Button'
+import * as StyleSheet from './StyleSheet'
 
-class Login extends Component {
-    
-    render() {
-        return (
-          <div>
-            <div>
-              <StyledInput placeholder="Email" status={InputConfig.Status.Default}/>
-            </div>  
-            <div>
-              <StyledInput placeholder="Password" type="password" status={InputConfig.Status.Default}/>
-            </div>
-            <div>
-              <StyledButton>Log in</StyledButton>
-            </div>
-          </div>
-        )
-    }
+interface ICredentials {
+  email: string,
+  password: string
+}
+const InitialState: ICredentials = {
+  email: "",
+  password: ""
+}
+
+const Login: React.FC = () => {
+  const [credentials, setCredentials] = useState<ICredentials>(InitialState)
+
+  return (
+    <StyleSheet.content>
+        <StyledInput placeholder="Email" onChange={(e) => setCredentials({...credentials, email: e.target.value})} status={InputConfig.Status.Default}/>
+        <StyledInput placeholder="Password" onChange={(e) => setCredentials({...credentials, password: e.target.value})} type="password" status={InputConfig.Status.Default}/>
+        <StyledButton onClick={() => console.log(credentials)}>Log in</StyledButton>
+    </StyleSheet.content>
+  )
 }
 
 export default Login
