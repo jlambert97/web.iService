@@ -1,0 +1,19 @@
+.DatePicker {
+    border: 1px solid #9499a1;
+    border-radius: 3px;
+    padding: 3px;
+    transition: border-color .5s ease-out;
+    margin: 3px;
+    flex-grow: 1;
+    width: 100%;
+}
+.DatePicker:focus {
+    border-color: #d13d3d;
+      box-shadow: 0 0 0 0;
+      outline: 0;
+}
+/* ALTERA O NATIVO DO REACT DATE PICKER */
+.react-datepicker__input-container{
+    display: flex;
+    flex-grow: 1;
+}

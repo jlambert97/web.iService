@@ -35,10 +35,21 @@ export const closeButton = styled.button`
     grid-column-end: 3;
     background-color: transparent;
     border-radius: 3px;
-    border: 2px solid palevioletred;
+    border: 2px solid #520000;
     color: red;
+    transition-duration: 0.5s;
     padding: 2px;
     cursor: pointer;
+    :hover {
+        background-color: red;
+        color: white;
+        box-shadow: 0 0 0 0;
+        outline: 0;
+    }
+    :active {
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    transform: translate3d(0, 1px, 0);
+  }
 `
 
 // Div do titulo da modal
